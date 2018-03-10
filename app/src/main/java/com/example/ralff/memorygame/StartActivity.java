@@ -24,11 +24,11 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-       // Animation animationl = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink180);
-        //lets.startAnimation(animationl);
-        //go.startAnimation(animationl);
+        Animation animationl = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.blink180);
         lets = findViewById(R.id.lets);
         go = findViewById(R.id.go);
+        lets.startAnimation(animationl);
+        go.startAnimation(animationl);
 
         nimi1 = findViewById(R.id.mängija1);
         nimi2 = findViewById(R.id.mängija2);
