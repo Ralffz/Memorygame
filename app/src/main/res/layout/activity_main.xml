@@ -8,12 +8,13 @@
     android:background="@color/aquablue"
     tools:context="com.example.ralff.memorygame.MainActivity">
 
-    <include
+    <include layout="@layout/pildid"
         android:layout_width="wrap_content"
-        android:layout_height="500dp"
+        android:layout_height="400dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        layout="@layout/pildid"/>
+        android:layout="@layout/pildid"
+        android:id="@+id/include" />
     <TextView
         android:id="@+id/pv1"
         android:layout_width="wrap_content"
@@ -21,13 +22,16 @@
         android:layout_alignParentTop="true"
         android:text="@string/p1"
         android:textSize="26dp"/>
+
     <TextView
         android:id="@+id/pv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:text="@string/p1"
-        android:textSize="26dp"/>
+        android:textSize="26dp" />
 
 
 </RelativeLayout>

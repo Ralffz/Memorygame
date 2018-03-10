@@ -29,15 +29,16 @@ public class MainActivity extends AppCompatActivity {
     int kaartiNr = 1;
     int kord = 1;
     int punktidIsik1 = 0, punktidIsik2 = 0;
-    //MediaPlayer mediaPlayer;
+    MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // if (mediaPlayer == null)
-         //   mediaPlayer = MediaPlayer.create(this, R.raw.peace);
-        //mediaPlayer.start();
+
+        if (mediaPlayer == null)
+            mediaPlayer = MediaPlayer.create(this, R.raw.peace);
+        mediaPlayer.start();
         SharedPreferences sharedPreferences = getSharedPreferences("nimed", MODE_PRIVATE);
         String m1 = sharedPreferences.getString("nimi1","Ei leitud");
         String m2 = sharedPreferences.getString("nimi2","Ei leitud");
@@ -359,8 +360,8 @@ public class MainActivity extends AppCompatActivity {
                 pr31.getVisibility() == View.INVISIBLE && pr32.getVisibility() == View.INVISIBLE &&
                 pr33.getVisibility() == View.INVISIBLE && pr34.getVisibility() == View.INVISIBLE){
 
-            //mediaPlayer.stop();
-            //mediaPlayer = null;
+            mediaPlayer.stop();
+            mediaPlayer = null;
 
             AlertDialog.Builder teavitus = new AlertDialog.Builder(MainActivity.this);
             LayoutInflater inflater = getLayoutInflater();
